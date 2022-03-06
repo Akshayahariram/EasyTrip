@@ -31,6 +31,9 @@
             android:layout_height="match_parent"
             app:boxStrokeColor="@color/black"
             android:layout_marginLeft="20dp"
+            app:counterMaxLength="10"
+            app:counterEnabled="true"
+            app:prefixText="+91"
             app:boxStrokeWidth="1dp"
             android:layout_marginRight="20dp"
             app:startIconDrawable="@drawable/phone"
@@ -40,6 +43,7 @@
             android:hint="Phone number">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
+                android:inputType="phone"
                 android:id="@+id/sphone_edt"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -59,20 +63,27 @@
             android:layout_marginLeft="20dp"
             app:boxStrokeColor="@color/black"
             app:endIconMode="clear_text"
+            app:counterMaxLength="6"
+            app:counterEnabled="true"
             app:boxStrokeWidth="1dp"
             app:startIconDrawable="@drawable/otp"
             android:layout_marginRight="20dp"
+
             android:layout_marginTop="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="OTP">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
         </com.google.android.material.textfield.TextInputLayout> <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         app:boxStrokeColor="@color/black"
+        app:counterEnabled="true"
+        app:counterMaxLength="6"
         app:endIconMode="clear_text"
         app:boxStrokeWidth="1dp"
         app:startIconDrawable="@drawable/otp"
@@ -83,6 +94,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:id="@+id/suser_edt"/>
     </com.google.android.material.textfield.TextInputLayout>
 

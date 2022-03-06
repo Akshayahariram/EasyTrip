@@ -10,12 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyTrip" >
         <activity
-            android:name=".Otp_Verification"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreen"
             android:exported="true" >
             <intent-filter>
