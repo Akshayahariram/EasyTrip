@@ -41,6 +41,7 @@
             app:counterEnabled="true"
             app:counterMaxLength="10"
             app:endIconMode="clear_text"
+            app:hintTextColor="@color/black"
             app:prefixText="+91"
             app:startIconDrawable="@drawable/phone">
 
@@ -51,7 +52,9 @@
                 android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
+            android:id="@+id/edit_number"
             android:layout_width="wrap_content"
+            app:hintTextColor="@color/black"
             android:layout_height="wrap_content"
             android:text="Edit number"
             android:textStyle="bold"
@@ -88,6 +91,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:hint="OTP"
+                app:hintTextColor="@color/black"
                 app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="1dp"
                 app:counterEnabled="true"
@@ -100,7 +104,7 @@
                     android:id="@+id/otp_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="numberPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,6 +117,7 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginRight="20dp"
                 android:hint="Confirm OTP"
+                app:hintTextColor="@color/black"
                 app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="1dp"
                 app:counterEnabled="true"
@@ -124,7 +129,7 @@
                     android:id="@+id/cotp_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="numberPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -137,6 +142,7 @@
                 android:text="Submit" />
 
             <TextView
+                android:id="@+id/resend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Resend OTP"

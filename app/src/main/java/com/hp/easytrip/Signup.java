@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,10 +36,9 @@ public class Signup extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
-        mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
+//        mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
 
         _onclick();
-
 
 
     }
@@ -67,6 +65,25 @@ public class Signup extends AppCompatActivity {
                 }
             }
         });
+
+        binding.editNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.phLay.setEnabled(true);
+                binding.otpLay.setVisibility(View.GONE);
+                binding.getOtpBtn.setVisibility(View.VISIBLE);
+            }
+        });
+        binding.resend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!_getph().isEmpty()){
+                    _send_otp();
+                    binding.otpEdt.setText("");
+                    binding.cotpEdt.setText("");
+                }
+            }
+        });
     }
 
 
@@ -81,6 +98,7 @@ public class Signup extends AppCompatActivity {
         }
         return "";
     }
+
     private void _send_otp() {
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
@@ -157,20 +175,20 @@ public class Signup extends AppCompatActivity {
                         }
                     }
                 })
-        .addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                dialog.dismiss();
-            }
-        });
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        dialog.dismiss();
+                    }
+                });
     }
 
 
     @Override
     protected void onStart() {
         super.onStart();
-        if (mAuth.getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        if (mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
     }
