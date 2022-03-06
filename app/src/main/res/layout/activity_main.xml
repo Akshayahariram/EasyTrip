@@ -315,7 +315,7 @@
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:drawableLeft="@drawable/ic_loc"
@@ -371,7 +371,7 @@
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:drawableLeft="@drawable/ic_loc"
@@ -510,6 +510,7 @@
 
 </LinearLayout>
     </ScrollView>
+<!--
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -533,6 +534,7 @@
         app:hintTextColor="#62FFFFFF"
         android:textColorHint="#86FFFFFF">
         <com.google.android.material.textfield.TextInputEditText
+            android:focusedByDefault="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -564,5 +566,6 @@
     </LinearLayout>
 </LinearLayout>
     </androidx.cardview.widget.CardView>
+-->
 
 </RelativeLayout>
