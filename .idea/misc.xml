@@ -10,7 +10,10 @@
         <entry key="..\:/Users/aksha/AndroidStudioProjects/EasyTrip/app/src/main/res/layout/activity_otp_verification.xml" value="0.15625" />
         <entry key="..\:/Users/aksha/AndroidStudioProjects/EasyTrip/app/src/main/res/layout/activity_signup.xml" value="0.2" />
         <entry key="..\:/Users/aksha/AndroidStudioProjects/EasyTrip/app/src/main/res/layout/activity_splash_screen.xml" value="0.16757246376811594" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.34739583333333335" />
+        <entry key="app/src/main/res/drawable/ic_loc.xml" value="0.223" />
+        <entry key="app/src/main/res/drawable/ic_more.xml" value="0.318" />
+        <entry key="app/src/main/res/drawable/ic_person.xml" value="0.318" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.34739583333333335" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.34739583333333335" />
       </map>

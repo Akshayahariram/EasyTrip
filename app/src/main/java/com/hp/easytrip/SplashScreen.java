@@ -17,29 +17,13 @@ public class SplashScreen extends AppCompatActivity {
         binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-        binding.anim.addAnimatorListener(new Animator.AnimatorListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onAnimationStart(Animator animator) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator) {
-                startActivity(new Intent(getApplicationContext(), Signup.class));
+            public void run() {
+                startActivity(new Intent(getApplicationContext(),Signup.class));
                 finish();
             }
-
-            @Override
-            public void onAnimationCancel(Animator animator) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animator) {
-
-            }
-        });
+        },6000);
     }
 
 }
