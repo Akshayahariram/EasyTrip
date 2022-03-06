@@ -37,6 +37,7 @@ public class Signup extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
+        mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
 
         _onclick();
 
@@ -165,7 +166,12 @@ public class Signup extends AppCompatActivity {
     }
 
 
-
-
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (mAuth.getCurrentUser()!=null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
+    }
 }
