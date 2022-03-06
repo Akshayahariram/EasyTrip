@@ -39,12 +39,12 @@
             app:startIconDrawable="@drawable/phone"
             app:endIconMode="clear_text"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:hint="Phone number">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:inputType="phone"
-                android:id="@+id/sphone_edt"
+                android:id="@+id/phone_edt"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,10 +52,10 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="Get OTP"
-            android:id="@+id/signin_btn"
+            android:id="@+id/get_otp_btn"
             android:layout_gravity="center"
             android:backgroundTint="@color/blue"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="10dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -75,6 +75,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/opt_edt"
                 android:inputType="number"/>
 
         </com.google.android.material.textfield.TextInputLayout> <com.google.android.material.textfield.TextInputLayout
@@ -88,23 +89,24 @@
         app:boxStrokeWidth="1dp"
         app:startIconDrawable="@drawable/otp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="1dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="Confirm OTP">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:id="@+id/suser_edt"/>
+            android:id="@+id/cotp_edt"/>
     </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="Submit"
+            android:id="@+id/submit_btn"
             android:layout_gravity="center"
             android:backgroundTint="@color/blue"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="15dp"/>
 
     </LinearLayout>
 
