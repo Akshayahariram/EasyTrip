@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Signup">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,100 +14,114 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
             android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
             android:src="@drawable/ic_contact" />
 
         <TextView
             android:layout_width="match_parent"
-            android:text="Verify"
-            android:textSize="35dp"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="Verify"
             android:textColor="@color/black"
-            android:layout_height="wrap_content"/>
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ph_lay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:boxStrokeColor="@color/black"
             android:layout_marginLeft="20dp"
-            app:counterMaxLength="10"
-            app:counterEnabled="true"
-            app:prefixText="+91"
-            app:boxStrokeWidth="1dp"
-            android:layout_marginRight="20dp"
-            app:startIconDrawable="@drawable/phone"
-            app:endIconMode="clear_text"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="10dp"
-            android:hint="Phone number">
+            android:layout_marginRight="20dp"
+            android:hint="Phone number"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:endIconMode="clear_text"
+            app:prefixText="+91"
+            app:startIconDrawable="@drawable/phone">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:inputType="phone"
                 android:id="@+id/phone_edt"
-                android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/get_otp_btn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Get OTP"
-            android:id="@+id/get_otp_btn"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/blue"
-            android:layout_marginTop="10dp"/>
+            android:text="Get OTP" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:id="@+id/otp_lay"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            app:boxStrokeColor="@color/black"
-            app:endIconMode="clear_text"
-            app:counterMaxLength="6"
-            app:counterEnabled="true"
-            app:boxStrokeWidth="1dp"
-            app:startIconDrawable="@drawable/otp"
-            android:layout_marginRight="20dp"
+            android:orientation="vertical">
 
-            android:layout_marginTop="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="OTP">
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="OTP"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="1dp"
+                app:counterEnabled="true"
+
+                app:counterMaxLength="6"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/otp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/opt_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:hint="Confirm OTP"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="1dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/otp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cotp_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/opt_edt"
-                android:inputType="number"/>
-
-        </com.google.android.material.textfield.TextInputLayout> <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        app:boxStrokeColor="@color/black"
-        app:counterEnabled="true"
-        app:counterMaxLength="6"
-        app:endIconMode="clear_text"
-        app:boxStrokeWidth="1dp"
-        app:startIconDrawable="@drawable/otp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="1dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Confirm OTP">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/cotp_edt"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:id="@+id/submit_btn"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/blue"
-            android:layout_marginTop="15dp"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/blue"
+                android:text="Submit" />
+        </LinearLayout>
 
     </LinearLayout>
 
