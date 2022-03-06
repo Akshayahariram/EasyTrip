@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/contact"
+            android:src="@drawable/ic_contact"
             android:adjustViewBounds="true"/>
 
         <TextView
@@ -36,7 +36,7 @@
             app:startIconDrawable="@drawable/email"
             app:endIconMode="clear_text"
             android:layout_marginTop="20dp"
-            android:hint="Email">
+            android:hint="Phone number">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

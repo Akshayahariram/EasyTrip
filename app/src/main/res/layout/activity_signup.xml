@@ -19,30 +19,12 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:text="Signup"
+            android:text="Verify"
             android:textSize="35dp"
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="@color/black"
             android:layout_height="wrap_content"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            app:boxStrokeColor="@color/black"
-            app:endIconMode="clear_text"
-            app:boxStrokeWidth="1dp"
-            app:startIconDrawable="@drawable/person"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Username">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/suser_edt"/>
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -63,13 +45,54 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
             android:text="Get OTP"
             android:id="@+id/signin_btn"
             android:layout_gravity="center"
             android:backgroundTint="@color/blue"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="25dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            app:boxStrokeColor="@color/black"
+            app:endIconMode="clear_text"
+            app:boxStrokeWidth="1dp"
+            app:startIconDrawable="@drawable/otp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="OTP">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout> <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        app:boxStrokeColor="@color/black"
+        app:endIconMode="clear_text"
+        app:boxStrokeWidth="1dp"
+        app:startIconDrawable="@drawable/otp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Confirm OTP">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/suser_edt"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:layout_marginTop="25dp"/>
 
     </LinearLayout>
 
