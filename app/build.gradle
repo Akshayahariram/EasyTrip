@@ -45,4 +45,6 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:29.1.0')
     implementation 'com.google.android.gms:play-services-safetynet:18.0.1'
     implementation 'com.google.firebase:firebase-auth'
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 }
