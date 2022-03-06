@@ -416,13 +416,13 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/khendra" />
+                                android:background="@drawable/gangotri" />
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kedarnath"
+                            android:text="Gangotri"
                             android:textColor="@color/black"
                             android:fontFamily="@font/ubuntu_medium"
                             android:textStyle="bold"
@@ -431,12 +431,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rudraprayag,Uttarkhand"
+                            android:text="Uttarkashi,Uttarkhand"
                             android:textColor="@color/grey"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:drawableLeft="@drawable/ic_loc"
@@ -471,13 +471,13 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/yamunotrie" />
+                                android:background="@drawable/badrniath" />
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yamunotri"
+                            android:text="Badrinath"
                             android:textColor="@color/black"
                             android:fontFamily="@font/ubuntu_medium"
                             android:textStyle="bold"
@@ -487,12 +487,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yamunotri,Uttarkhand"
+                            android:text="Chamoli,Uttarkhand"
                             android:textColor="@color/grey"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textSize="12sp"
-                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:drawableLeft="@drawable/ic_loc"
