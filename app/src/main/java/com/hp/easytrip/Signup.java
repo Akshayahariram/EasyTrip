@@ -3,6 +3,7 @@ package com.hp.easytrip;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +22,7 @@ public class Signup extends AppCompatActivity {
         binding.getOtpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                _getph();
+                Toast.makeText(Signup.this, _getph(), Toast.LENGTH_SHORT).show();
                 binding.phLay.setEnabled(false);
                 binding.otpLay.setVisibility(View.VISIBLE);
                 binding.getOtpBtn.setVisibility(View.GONE);
