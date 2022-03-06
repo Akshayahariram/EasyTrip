@@ -15,8 +15,8 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:layout_marginTop="25dp"
-            android:src="@drawable/contact"
-            />
+            android:src="@drawable/ic_contact" />
+
         <TextView
             android:layout_width="match_parent"
             android:text="Signup"
