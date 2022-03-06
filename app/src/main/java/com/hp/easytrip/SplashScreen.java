@@ -2,6 +2,7 @@ package com.hp.easytrip;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,14 +18,28 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-
-        new Handler().postDelayed(new Runnable() {
+        binding.anim.addAnimatorListener(new Animator.AnimatorListener() {
             @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(),Signup.class));
+            public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+                startActivity(new Intent(getApplicationContext(), Signup.class));
                 finish();
             }
-        },6000);
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+
+            }
+        });
     }
 
 }

@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
     <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:lottie_rawRes="@raw/anime"
         android:layout_alignParentBottom="true"
-        app:lottie_loop="true"
         app:lottie_autoPlay="true"/>
 
 </RelativeLayout>
