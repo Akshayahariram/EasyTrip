@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Details">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collaping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/blue"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Kedarnath">
+
+            <!--We are adding the image that we have added earlier
+                in the drawable folder.The attribute app:layout_collapseMode="parallax"
+                causes the image to move when user scrolls at a specific ratio. -->
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/khendra"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Now add the NestedScollView-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8sp"
+                android:padding="13dp"
+                android:text="What To Know"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8sp"
+                android:paddingLeft="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="
+One of the most revered temple destinations of India, Kedarnath town is nestled in the mighty Garhwal Himalayas. The town, built around the revered Kedarnath temple, is located at an altitude of 3,580 m, near Chorabari glacier, which is the source of the Mandakini river. Dedicated to Lord Shiva, the ancient temple has exquisite architecture and is built of extremely large but evenly shaped grey stone slabs. A conical rock formation inside the temple is worshipped as Lord Shiva in his “Sadashiva” form.  The Kedarnath temple, dedicated to Lord Shiva, is a part of Char Dham pilgrimage circuit, and is one of the 12 Jyotirlingas of Lord Shiva in India. Behind the Kedarnath temple, stand the Kedarnath peak, Kedar Dome and other Himalayan peaks.
+
+The historical name of this region is  and legend says, the Pandavas from the epic Mahabharata, after having defeated the Kauravas, felt guilty of having killed so many people and sought the blessings of Lord Shiva for redemption. The Lord eluded them repeatedly and took refuge at Kedarnath in the form of a bull. The Lord dived into the ground, leaving his hump on the surface at Kedarnath. The remaining portions of Lord Shiva appeared at four other places and are worshipped there as his manifestations. The arms of the Lord appeared at Tungnath, the face at Rudranath, the belly at Madmaheshwar and his locks (hair) at Kalpeshwar. The Kedarnath and four above mentioned shrines make the revered Panch Kedar pilgrimage circuit. For booking a pilgrimage, visit https://badrinath-kedarnath.gov.in/common/kedarnath.
+
+BEST TIME TO VISIT
+
+From May to October is the best time to visit Kedarnath. During winter months, the town remains closed due to heavy snowfall. The temple has been shut for the winter of 2021-22.
+
+Where to stay
+
+KEDARNATH (Rudra Meditation Cave) Kedarnath (Swargarohini Complex)
+
+Itineraries" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
