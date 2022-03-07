@@ -35,9 +35,11 @@
                 app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/back_arrow"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -71,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="8sp"
                 android:paddingLeft="5dp"
-                android:textSize="12dp"
+                android:textSize="13dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/ubuntu_medium"
                 android:text="

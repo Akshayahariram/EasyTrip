@@ -3,6 +3,7 @@ package com.hp.easytrip;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.hp.easytrip.databinding.ActivityDetailsBinding;
 
@@ -18,6 +19,12 @@ public class Details extends AppCompatActivity {
         String name = getIntent().getStringExtra("NAME");
         String content = getIntent().getStringExtra("CONTENT");
 
+        binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
         binding.collaping.setTitle(name);
         binding.content.setText(content);
         switch (name){
@@ -32,4 +39,5 @@ public class Details extends AppCompatActivity {
                 break;
         }
     }
+
 }
