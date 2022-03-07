@@ -3,6 +3,7 @@ package com.hp.easytrip;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,22 +21,38 @@ public class MainActivity extends AppCompatActivity {
         binding.policeNearby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),police_nearby.class));
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=policestation");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
             }
         }); binding.policeBulk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),police_nearby.class));
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=petrol");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
             }
         }); binding.nearbyHotels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),police_nearby.class));
+
+
+// Search for restaurants in San Francisco
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=restaurants");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+
             }
         });binding.nearbyLodge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),police_nearby.class));
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=lodge");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
             }
         });
         binding.Kedarnath.setOnClickListener(new View.OnClickListener() {
