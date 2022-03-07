@@ -32,8 +32,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),police_nearby.class));
             }
+        });binding.nearbyLodge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),police_nearby.class));
+            }
         });
-        binding.nearbyLodge.setOnClickListener(new View.OnClickListener() {
+        binding.Kedarnath.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Details.class)
