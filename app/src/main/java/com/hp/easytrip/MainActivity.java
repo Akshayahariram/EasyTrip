@@ -32,25 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         client = LocationServices.getFusedLocationProviderClient(this);
 
-     /*   if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            getCurrentLoca();
-        } else {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 101);
 
-        }
 
-        binding.share.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String geoUri = "http://maps.google.com/maps?q=loc:" + lat + "," + log + " (" + "Current Location" + ")";
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                Uri screenshotUri = Uri.parse(geoUri);
-
-                sharingIntent.setType("text/plain");
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                startActivity(Intent.createChooser(sharingIntent, "Share image using"));
-            }
-        });*/
 
         binding.policeNearby.setOnClickListener(new View.OnClickListener() {
             @Override
