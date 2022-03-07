@@ -18,7 +18,9 @@
         <entry key="app/src/main/res/drawable/ic_more.xml" value="0.318" />
         <entry key="app/src/main/res/drawable/ic_person.xml" value="0.318" />
         <entry key="app/src/main/res/drawable/ic_police.xml" value="0.318" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_hotels_nearby.xml" value="0.34739583333333335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_police_nearby.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.34739583333333335" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.34739583333333335" />
       </map>

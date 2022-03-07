@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Easy Trip</string>
+    <string name="title_activity_police_nearby">police_nearby</string>
 </resources>

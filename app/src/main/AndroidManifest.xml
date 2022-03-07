@@ -11,6 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyTrip">
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDLR8Bjp2W-qn4IWY1GtysBdKT5a8bWNqk" />
+
+        <activity
+            android:name=".police_nearby"
+            android:exported="false"
+            android:label="@string/title_activity_police_nearby" />
+        <activity
+            android:name=".hotels_nearby"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -26,7 +39,7 @@
         <activity
             android:name=".Signup"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
