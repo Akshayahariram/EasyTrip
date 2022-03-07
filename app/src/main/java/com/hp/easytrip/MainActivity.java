@@ -22,8 +22,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),police_nearby.class));
             }
+        }); binding.policeBulk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),police_nearby.class));
+            }
+        }); binding.nearbyHotels.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),police_nearby.class));
+            }
         });
-        binding.Kedarnath.setOnClickListener(new View.OnClickListener() {
+        binding.nearbyLodge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Details.class)
