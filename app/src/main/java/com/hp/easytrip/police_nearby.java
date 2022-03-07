@@ -103,19 +103,6 @@ public class police_nearby extends FragmentActivity implements OnMapReadyCallbac
 
         getCurrentLoca();
 
-        StringBuilder builder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
-        builder.append("location="+lat+","+log);
-        builder.append("&radius=1000");
-        builder.append("&keyword="+"atm");
-        builder.append("&sensor=true");
-        builder.append("&key="+getResources().getString(R.string.KEY));
-
-        String url = builder.toString();
-        Object data[] = new Object[2];
-        data[0]=mMap;
-        data[1]=url;
-        FetchData fetchData =new FetchData();
-        fetchData.execute(data);
     }
 
 
@@ -129,76 +116,4 @@ public class police_nearby extends FragmentActivity implements OnMapReadyCallbac
         }
     }
 
-    class DownloadURL {
-        public String retriveurl(String url) throws IOException {
-            String urlData = "";
-            HttpURLConnection httpURLConnection = null;
-            InputStream inputStream = null;
-            try {
-                URL getUrl = new URL(url);
-                httpURLConnection = (HttpURLConnection) getUrl.openConnection();
-                httpURLConnection.connect();
-                inputStream = httpURLConnection.getInputStream();
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                StringBuffer sb = new StringBuffer();
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    sb.append(line);
-                }
-                urlData = sb.toString();
-                bufferedReader.close();
-            } catch (Exception e) {
-                Log.e("TAG", "retriveurl: " + e);
-            } finally {
-                inputStream.close();
-                httpURLConnection.disconnect();
-            }
-            return urlData;
-        }
-    }
-
-    class FetchData extends AsyncTask<Object, String, String> {
-        String googleNearbyData;
-        String url;
-        GoogleMap map;
-
-        @Override
-        protected String doInBackground(Object... objects) {
-            try {
-                map = (GoogleMap) objects[0];
-                url = (String) objects[1];
-                DownloadURL downloadURL = new DownloadURL();
-                googleNearbyData = downloadURL.retriveurl(url);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return googleNearbyData;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            try {
-                JSONObject object = new JSONObject(s);
-                JSONArray jsonArray = object.getJSONArray("results");
-                for (int i = 0; i < jsonArray.length(); i++) {
-                    JSONObject jsonObject = jsonArray.getJSONObject(i);
-                    JSONObject getLOC = jsonObject.getJSONObject("geometry")
-                            .getJSONObject("location");
-                    String lat = getLOC.getString("lat");
-
-                    String lang = getLOC.getString("lng");
-
-                    JSONObject getname =jsonArray.getJSONObject(i);
-                    String name = getname.getString("name");
-
-                    LatLng latLng = new LatLng(Double.parseDouble(lat),Double.parseDouble(lang));
-                    MarkerOptions markerOptions = new MarkerOptions().position(latLng).title(name);
-                    map.addMarker(markerOptions);
-                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
